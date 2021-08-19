@@ -1,0 +1,13 @@
+<h1>List Movie</h1>
+
+<%= @list.name %>
+<% @list.bookmarks.each do |bookmark| %>
+<%= bookmark.movie.title %>
+<%= bookmark.comment %>
+<% end %>
+
+<%= link_to 'DELETE a bookmark', bookmark_path(@list.bookmarks), method: :delete %>
+
+<%= link_to 'Create a bookmark', new_list_bookmark_path(@list) %>
+
+<%= link_to 'Voltar as listas', lists_path %>
