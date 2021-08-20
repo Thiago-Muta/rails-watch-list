@@ -1,8 +1,10 @@
 <h1>Lists</h1>
 
 <% @lists.each do |list| %>
-<%= list.name %>
-<%= link_to 'Ver essa lista', list_path(list) %>
+  <li>
+    <%= list.name %>
+    <%= link_to 'Ver essa lista', list_path(list) %>
+  </li>
 <% end %>
 
 <p></p>
